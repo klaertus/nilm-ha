@@ -1,0 +1,66 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "NILM Backend Connection",
+        "description": "Connect to your NILM Docker container.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "power_entity_id": "Power sensor entity",
+          "scan_interval": "Scan interval (seconds)",
+          "data_push_interval": "Power data push interval (hours)"
+        },
+        "data_description": {
+          "host": "IP address or hostname of the NILM Docker container.",
+          "port": "API port of the NILM container (default 8000).",
+          "power_entity_id": "Home Assistant entity providing aggregate power in Watts.",
+          "scan_interval": "Seconds between prediction cycles.",
+          "data_push_interval": "Hours between power data pushes to the container."
+        }
+      },
+      "model": {
+        "title": "Select Model",
+        "description": "Pick an existing model or create a new one.",
+        "data": {
+          "model_name": "Model"
+        },
+        "data_description": {
+          "model_name": "Select a model to load on the container."
+        }
+      },
+      "new_model": {
+        "title": "Create New Model",
+        "description": "Enter a name for the new model to create on the container.",
+        "data": {
+          "new_model_name": "Model name"
+        },
+        "data_description": {
+          "new_model_name": "Name of the model to create (or load if it already exists)."
+        }
+      },
+      "appliances": {
+        "title": "Select Appliances",
+        "description": "Choose which appliances from the model you want to monitor. Deselect any that are not present in your home.",
+        "data": {
+          "enabled_appliances": "Appliances"
+        },
+        "data_description": {
+          "enabled_appliances": "Select all appliances present in your household."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the NILM backend. Check host and port.",
+      "no_models": "Connected but no models found on the backend.",
+      "model_required": "Select an existing model or enable new model creation.",
+      "new_model_name_required": "Enter a name for the new model.",
+      "invalid_model_name": "Invalid name. Use letters, digits, '-' or '_' (1-64 chars, must start alphanumeric).",
+      "model_load_failed": "The backend could not load the selected model. Check the server logs.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "NILM is already configured."
+    }
+  }
+}

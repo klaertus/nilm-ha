@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+
+# Environment
+.env
+
+# Generated runtime data
+models/
+data/
+runs/
+temp/
+
+# Large or generated experiment artefacts
+experiments/datasets/
+experiments/results/
+experiments/__pycache__/
+
+# Docker
+*.log

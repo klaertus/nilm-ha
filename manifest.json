@@ -1,0 +1,12 @@
+{
+  "domain": "nilm",
+  "name": "NILM - Non-Intrusive Load Monitoring",
+  "version": "2.4.1",
+  "documentation": "https://github.com/klaertus/nilm-ha",
+  "issue_tracker": "https://github.com/klaertus/nilm-ha/issues",
+  "requirements": ["aiohttp>=3.9.0", "numpy>=1.26.0"],
+  "dependencies": [],
+  "codeowners": ["@klaertus"],
+  "iot_class": "local_polling",
+  "config_flow": true
+}

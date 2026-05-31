@@ -1,0 +1,15 @@
+push_data:
+  name: Push power history to backend
+  description: >
+    Collect HA recorder history for the configured power entity and any
+    linked appliance entities, then POST it to the backend's /data endpoint.
+  fields:
+    hours:
+      name: Hours of history
+      description: Window of history to push, in hours. Defaults to the configured push interval.
+      required: false
+      example: 24
+      selector:
+        number:
+          min: 0.1
+          max: 8760
